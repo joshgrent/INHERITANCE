@@ -1,0 +1,16 @@
+class Educator:
+    def preparelessons(self):
+        print("this educator can preparelessons.")
+
+class Itinstructor(Educator):
+    def teachcoding(self):
+        print("this itinstructor can teachcoding.")
+
+class Databaseinstructor(Itinstructor):
+    def demonstrateMYSQL(self):
+        print("this Databaseinstructor can demonstrateMYSQL.")
+
+Databaseinstructor = Databaseinstructor()
+Databaseinstructor.preparelessons()
+Databaseinstructor.teachcoding()
+Databaseinstructor.demonstrateMYSQL()
