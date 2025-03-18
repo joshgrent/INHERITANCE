@@ -3,9 +3,16 @@ class EsportsEvent:
         print("this esportsevent can schedulematch.")
 
 class StudentDivision(EsportsEvent):
-    def registerteam(selft):
+    def registerteam(self):
         print("this studentdivision can registerteam.")
 
 class Facultydivision(EsportsEvent):
     def assignreferee(self):
+        print("this facultydivision can assignreferee.")
         
+Facultydivision = Facultydivision()
+StudentDivision = StudentDivision()
+Facultydivision.schedulematch()
+Facultydivision.assignreferee()
+StudentDivision.schedulematch()
+StudentDivision.registerteam()
