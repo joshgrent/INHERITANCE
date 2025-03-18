@@ -1,0 +1,17 @@
+class GraphicDesigner:
+    def designlogo(self):
+        print("this graphicdesigner can designlogo.")
+
+class WebDeveloper:
+    def buildwebsite(self):
+        print("this webdeveloper can buildwebsite.")
+
+class DigitalSolutions(GraphicDesigner, WebDeveloper):
+    def deliverproject(self):
+        print("this digitalsolutions can deliverproject.")
+
+
+DigitalSolutions = DigitalSolutions()
+DigitalSolutions.designlogo()
+DigitalSolutions.buildwebsite()
+DigitalSolutions.deliverproject() 
