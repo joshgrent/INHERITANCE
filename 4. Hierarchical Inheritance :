@@ -1,0 +1,11 @@
+class EsportsEvent:
+    def schedulematch(self):
+        print("this esportsevent can schedulematch.")
+
+class StudentDivision(EsportsEvent):
+    def registerteam(selft):
+        print("this studentdivision can registerteam.")
+
+class Facultydivision(EsportsEvent):
+    def assignreferee(self):
+        
