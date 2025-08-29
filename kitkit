@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int totalMale = 0, totalFemale = 0, total = 0;
+    char name[50], sex[10], ans;
+
+    do {
+        
+        while (1) {
+            printf("Enter participant's name: ");
+            scanf(" %[^\n]", name);
+
+            printf("Enter sex (Male/Female): ");
+            scanf("%s", sex);
+
+            if (strcasecmp(sex, "Male") == 0) {
+                totalMale++;
+                break; 
+            } else if (strcasecmp(sex, "Female") == 0) {
+                totalFemale++;
+                break;
+            } else {
+                printf("Invalid sex entered. Please enter 'Male' or 'Female'.\n\n");
+                
+            }
+        }
+
+        printf("Add another participant? (Y/N): ");
+        scanf(" %c", &ans); 
+
+    } while (ans == 'Y' || ans == 'y');
+
+    total = totalMale + totalFemale;
+
+    // Output
+    printf("\n--- Seminar Participant Summary ---\n");
+    printf("Total Male Participants   : %d\n", totalMale);
+    printf("Total Female Participants : %d\n", totalFemale);
+    printf("Total Participants        : %d\n", total);
+
+    if (total >= 7) {
+        printf("\nSeminar will proceed.\n");
+    } else {
+        printf("\nSeminar will NOT proceed.\n");
+    }
+
+    return 0;
+}
