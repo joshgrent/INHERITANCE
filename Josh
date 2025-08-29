@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[50];
+    char sex[10];
+    int numParticipants = 0;
+    int numMale = 0;
+    int numFemale = 0;
+
+    printf("Welcome to the IT Seminar Program!\n");
+
+    printf("\nEnter participant name: ");
+    scanf("%s", name);
+
+    printf("Enter participant sex (Male/Female): ");
+    scanf("%s", sex);
+
+    if (strcmp(sex, "Male") == 0 || strcmp(sex, "male") == 0) {
+        numMale++;
+    } else if (strcmp(sex, "Female") == 0 || strcmp(sex, "female") == 0) {
+        numFemale++;
+    } else {
+        printf("Invalid sex entered.\n");
+        return 0;
+    }
+
+    numParticipants++;
+
+    printf("\n--- Seminar Results ---\n");
+    printf("Total Participants: %d\n", numParticipants);
+    printf("Number of Male Participants: %d\n", numMale);
+    printf("Number of Female Participants: %d\n", numFemale);
+
+    if (numParticipants > 500) {
+        printf("The seminar can be held!\n");
+    } else {
+        printf("The seminar cannot be held due to insufficient participants.\n");
+    }
+
+    return 0;
+}
